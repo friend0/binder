@@ -1,0 +1,168 @@
+page 1 front [3/9]
+    Galadhrim Ambush
+    Pristine Talisman
+    Swan Song
+page 1 back [3/9]
+    Dark Ritual
+    Kalitas, Bloodchief of Ghet
+    Kykar, Wind's Fury
+page 2 front [4/9]
+    Double Jump // Flying Kick
+    Embercleave
+    Gardenize
+    Sorin, Vengeful Bloodlord
+page 2 back [4/9]
+    Frodo, Adventurous Hobbit
+    Frodo, Adventurous Hobbit
+    Knight of the Ebon Legion
+    Three Steps Ahead
+page 3 front [3/9]
+    Golos, Tireless Pilgrim
+    Smaug, Wicked Worm
+    Tainted Pact
+page 3 back [1/9]
+    Call Forth the Tempest
+page 4 front [4/9]
+    Kaalia, Zenith Seeker
+    Mystic Sanctuary
+    Niv-Mizzet, Ghost Counsel
+    Shadowspear
+page 4 back [3/9]
+    Blood Crypt
+    Reanimate
+    Reanimate
+page 5 front [3/9]
+    Harbinger of the Seas
+    Leyline of the Void
+    Leyline of the Void
+page 5 back [4/9]
+    Brushland
+    Gleaming Splendor
+    Radagast of Rhosgobel
+    Tablet of Discovery
+page 6 front [0/9]
+page 6 back [3/9]
+    Chandra, Torch of Defiance
+    Éomer, Marshal of Rohan
+    Witch-king of Angmar
+page 7 front [5/9]
+    Bloodstained Mire
+    Sauron, Lord of the Rings
+    Sephara, Sky's Blade
+    The Queen of Dale
+    Well of Lost Dreams
+page 7 back [2/9]
+    Arcane Signet
+    Cabal Stronghold
+page 8 front [4/9]
+    Dark Matter Manipulator
+    Murderous Rider // Swift End
+    Overwhelming Stampede
+    The Lonely Mountain
+page 8 back [3/9]
+    Dragon's Rage Channeler
+    Elvish Archdruid
+    Sanguine Bond
+page 9 front [4/9]
+    Asceticism
+    Glamdring
+    Rivendell
+    Toxic Deluge
+page 9 back [4/9]
+    Archon of Cruelty
+    Elvish Warmaster
+    Misleading Signpost
+    The Gaffer
+page 10 front [3/9]
+    Bilbo's Gambit
+    Elven Passage
+    Windswift Slice
+page 10 back [4/9]
+    Dread Presence
+    Dread Presence
+    Lotus Field
+    Negate
+page 11 front [3/9]
+    Chandra, Chill of Compliance
+    Chandra, Chill of Compliance
+    Sanguine Bond
+page 11 back [2/9]
+    Boromir, Warden of the Tower
+    Exsanguinate
+page 12 front [4/9]
+    Forge Anew
+    Polluted Delta
+    Sorcerous Squall
+    Thoughtseize
+page 12 back [2/9]
+    Avatar of Burgeoning Echoes
+    Cabal Coffers
+page 13 front [4/9]
+    Arwen, Mortal Queen
+    Fling
+    Raise the Palisade
+    The One Ring
+page 13 back [2/9]
+    Cabal Ritual
+    Cabal Ritual
+page 14 front [2/9]
+    Clearwater Pathway // Murkwater Pathway
+    Commander's Sphere
+page 14 back [4/9]
+    Chromatic Lantern
+    Commander's Sphere
+    Palantír of Orthanc
+    Ponder
+page 15 front [4/9]
+    Crypt of Agadeem
+    Overgrown Farmland
+    Rejuvenating Springs
+    Sol Ring
+page 15 back [4/9]
+    Arwen, Weaver of Hope
+    Chromatic Lantern
+    Roaming Throne
+    Soul's Fire
+page 16 front [2/9]
+    Birds of Paradise
+    Mnemonic Deluge
+page 16 back [4/9]
+    Goblin Electromancer
+    Lightning Greaves
+    Primal Amulet // Primal Wellspring
+    Thunderclap Drake
+page 17 front [3/9]
+    Arcane Bombardment
+    Manaform Hellkite
+    The Great Goblin
+page 17 back [3/9]
+    God-Eternal Rhonas
+    Sundering Eruption // Volcanic Fissure
+    Swiftfoot Boots
+page 18 front [2/9]
+    Archmage of Runes
+    Mithril Coat
+page 18 back [3/9]
+    Field of the Dead
+    Heroic Intervention
+    Thought Vessel
+page 19 front [4/9]
+    Arcane Signet
+    Isengard Unleashed
+    Living Death
+    Scalding Tarn
+page 19 back [3/9]
+    Anguished Unmaking
+    Flooded Strand
+    Minas Tirith
+page 20 front [4/9]
+    Blightstep Pathway // Searstep Pathway
+    Necrodominance
+    Niv-Mizzet Reborn
+    Sol Ring
+page 20 back [3/9]
+    Elvish Piper
+    Omnath, Locus of the Roil
+    Sauron, the Lidless Eye
+
+126/360 slots used

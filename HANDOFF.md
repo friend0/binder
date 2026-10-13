@@ -64,6 +64,10 @@ re-sorting or shifting cards, and must spread cards evenly without manual rebala
 - `edhrec_top.txt` — ~420 names from EDHREC top cards (past year) + top lands/creatures/artifacts/
   instants pages (fetched Oct 2026).
 - `decklist.txt` — user's deck list (Moxfield-style export).
+- `exports/YYYY-MM-DD.csv` — ManaBox exports of the binder, one per scanning session, committed
+  as-is (named by export date). The newest is the baseline; to sync after a session:
+  `python3 binder.py diff exports/<previous>.csv exports/<new>.csv`, then commit the new file.
+  `2026-10-13.csv` is the first snapshot (126 cards, originally `Primo.csv`).
 
 ## Known limitations / open items
 - ManaBox CSV export verified (Oct 2026, `Primo.csv`, 126 cards). Header: `Name, Set code, Set name,

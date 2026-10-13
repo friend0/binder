@@ -1,0 +1,5 @@
+__pycache__/
+results.json
+binder.json
+binder.json.*
+result

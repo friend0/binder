@@ -1,0 +1,420 @@
+Sol Ring
+Arcane Signet
+Swords to Plowshares
+Path to Exile
+Counterspell
+Cultivate
+Farseek
+Blasphemous Act
+Beast Within
+Talisman of Dominance
+Assassin's Trophy
+Nature's Lore
+Rampant Growth
+Heroic Intervention
+Chaos Warp
+Birds of Paradise
+Talisman of Creativity
+Talisman of Indulgence
+Talisman of Hierarchy
+Swiftfoot Boots
+An Offer You Can't Refuse
+Talisman of Progress
+Dark Ritual
+Anguished Unmaking
+Kodama's Reach
+Ignoble Hierarch
+Three Visits
+Lightning Greaves
+Talisman of Conviction
+Rakdos Signet
+Dimir Signet
+Rhystic Study
+Izzet Signet
+Boros Charm
+Llanowar Elves
+Orzhov Signet
+Rhythm of the Wild
+Arcane Denial
+Fellwar Stone
+Generous Gift
+Negate
+Cyclonic Rift
+Reanimate
+Smothering Tithe
+Azorius Signet
+Growth Spiral
+Dovin's Veto
+Terminate
+Swan Song
+Esper Sentinel
+Demonic Tutor
+Toxic Deluge
+Brainstorm
+Ruinous Ultimatum
+Deflecting Swat
+Boros Signet
+Garruk's Uprising
+Fierce Guardianship
+Thought Vessel
+Elvish Mystic
+Noble Hierarch
+Feed the Swarm
+Frantic Search
+Teferi's Protection
+Putrefy
+Faithless Looting
+Sakura-Tribe Elder
+Mystic Remora
+Vandalblast
+Eternal Witness
+Jeska's Will
+Temur Ascendancy
+Void Rend
+Phyrexian Arena
+Rakdos Charm
+Deadly Rollick
+Propaganda
+Damn
+Enlightened Tutor
+Mana Drain
+Kutzil, Malamet Exemplar
+Vampiric Tutor
+Leyline of the Guildpact
+Mind Stone
+Despark
+Lotho, Corrupt Shirriff
+Baleful Strix
+Black Market Connections
+Victimize
+Annie Joins Up
+Deadly Dispute
+Morophon, the Boundless
+Delighted Halfling
+Faeburrow Elder
+Avacyn's Pilgrim
+Talisman of Resilience
+Big Score
+Ghostly Prison
+Talisman of Curiosity
+Supreme Verdict
+Command Tower
+Breeding Pool
+Watery Grave
+Overgrown Tomb
+Godless Shrine
+Stomping Ground
+Hallowed Fountain
+Temple Garden
+Steam Vents
+Blood Crypt
+Sacred Foundry
+Cinder Glade
+Clifftop Retreat
+Sulfur Falls
+Exotic Orchard
+Dragonskull Summit
+Canopy Vista
+Isolated Chapel
+Glacial Fortress
+Hinterland Harbor
+Smoldering Marsh
+Woodland Cemetery
+Sunken Hollow
+Prairie Stream
+Drowned Catacomb
+Rootbound Crag
+Shivan Reef
+Battlefield Forge
+Bojuka Bog
+Sunpetal Grove
+Caves of Koilos
+Jungle Shrine
+Reliquary Tower
+Ketria Triome
+Llanowar Wastes
+Opulent Palace
+Frontier Bivouac
+Nomad Outpost
+Mystic Monastery
+Jetmir's Garden
+Yavimaya Coast
+Zagoth Triome
+Indatha Triome
+Spara's Headquarters
+Arcane Sanctum
+Crumbling Necropolis
+The World Tree
+Rejuvenating Springs
+Seaside Citadel
+Sandsteppe Citadel
+Adarkar Wastes
+Ziatora's Proving Ground
+Sulfurous Springs
+Undergrowth Stadium
+Training Center
+Luxury Suite
+Sea of Clouds
+Underground River
+Dreamroot Cascade
+Raffine's Tower
+Morphic Pool
+Vault of Champions
+Raugrin Triome
+Savai Triome
+Spire Garden
+Spectator Seating
+Path of Ancestry
+Xander's Lounge
+Bountiful Promenade
+Karplusan Forest
+Brushland
+Stormcarved Coast
+Savage Lands
+Rockfall Vale
+Rogue's Passage
+Evolving Wilds
+Boseiju, Who Endures
+Overgrown Farmland
+Shipwreck Marsh
+Shattered Sanctum
+Deserted Beach
+Sundown Pass
+Haunted Ridge
+Rugged Prairie
+Otawara, Soaring City
+Flooded Grove
+Fortified Village
+Golgari Rot Farm
+Temple of Silence
+Simic Growth Chamber
+Cascade Bluffs
+Deathcap Glade
+Temple of Epiphany
+Temple of Mystery
+Fetid Heath
+Tatyova, Benthic Druid
+Blood Artist
+Solemn Simulacrum
+Goblin Anarchomancer
+Tireless Provisioner
+Muldrotha, the Gravetide
+Deathrite Shaman
+Mayhem Devil
+Beast Whisperer
+Fyndhorn Elves
+Storm-Kiln Artist
+Professional Face-Breaker
+Scute Swarm
+Elas il-Kor, Sadistic Pilgrim
+Bloom Tender
+Grand Abolisher
+Elves of Deep Shadow
+Hexing Squelcher
+Pitiless Plunderer
+Mirkwood Bats
+Zulaport Cutthroat
+Goblin Electromancer
+Maelstrom Wanderer
+Archmage Emeritus
+Gray Merchant of Asphodel
+Morbid Opportunist
+Seedborn Muse
+Nissa, Leyline Tamer
+Viscera Seer
+Orcish Bowmasters
+Witch Enchanter
+Avenger of Zendikar
+Craterhoof Behemoth
+Hullbreaker Horror
+Syr Konrad, the Grim
+Dryad of the Ilysian Grove
+Etali, Primal Storm
+Ragavan, Nimble Pilferer
+Sun Titan
+Temur Battlecrier
+Faerie Mastermind
+Lotus Cobra
+Reclamation Sage
+Etali, Primal Conqueror
+Miirym, Sentinel Wyrm
+Veyran, Voice of Duality
+Azusa, Lost but Seeking
+Aurelia, the Warleader
+Zacama, Primal Calamity
+Phyrexian Metamorph
+Loran of the Third Path
+The Gitrog Monster
+Braids, Arisen Nightmare
+Aesi, Tyrant of Gyre Strait
+Niv-Mizzet, Parun
+Isshin, Two Heavens as One
+Omnath, Locus of Rage
+Cruel Celebrant
+Korvold, Fae-Cursed King
+Rampaging Baloths
+Forgotten Ancient
+Toski, Bearer of Secrets
+Stormcatch Mentor
+Anger
+Icetill Explorer
+Sythis, Harvest's Hand
+Evolution Sage
+Kami of Whispered Hopes
+Fanatic of Rhonas
+Shalai, Voice of Plenty
+Goldspan Dragon
+Voice of Victory
+Spark Double
+Selvala, Heart of the Wilds
+Roaming Throne
+Enduring Vitality
+Kardur, Doomscourge
+Welcoming Vampire
+Ohran Frostfang
+Mondrak, Glory Dominus
+Jegantha, the Wellspring
+Dauthi Voidwalker
+Sram, Senior Edificer
+Disciple of Freyalise
+Guttersnipe
+Skullclamp
+Timeless Lotus
+Talisman of Impulse
+Commander's Sphere
+Simic Signet
+Cauldron of Essence
+The Great Henge
+Golgari Signet
+Chromatic Lantern
+Gruul Signet
+The One Ring
+Bolas's Citadel
+Relic of Sauron
+Talisman of Unity
+Lotus Petal
+Selesnya Signet
+Resonating Lute
+Wayfarer's Bauble
+Ashnod's Altar
+Bident of Thassa
+Mana Vault
+Chrome Mox
+Herald's Horn
+Cursed Mirror
+The Earth Crystal
+Fist of Suns
+Conduit of Worlds
+Wishclaw Talisman
+The Reaver Cleaver
+Idol of Oblivion
+Patchwork Banner
+Thran Dynamo
+Mox Amber
+The Soul Stone
+Sensei's Divining Top
+Sword of the Animist
+Mithril Coat
+The Wind Crystal
+Midnight Clock
+Mox Opal
+The Fire Crystal
+Mox Diamond
+Everflowing Chalice
+Basilisk Collar
+Archaeomancer's Map
+Panharmonicon
+Charcoal Diamond
+Fire Diamond
+Jet Medallion
+Whip of Erebos
+Ruby Medallion
+Sky Diamond
+Wizard's Staff
+The Ozolith
+Phyrexian Altar
+Decanter of Endless Water
+Shadowspear
+Urza's Incubator
+Herd Heirloom
+Sunforger
+Whispersilk Cloak
+Blackblade Reforged
+The Darkness Crystal
+Sapphire Medallion
+Vanquisher's Banner
+Aetherflux Reservoir
+Helm of the Host
+Marble Diamond
+Gilded Lotus
+Mystic Forge
+Door to Nothingness
+Pearl Medallion
+Expedition Map
+The Water Crystal
+Abrade
+Worldly Tutor
+Pongify
+Bedevil
+Mystical Tutor
+Lightning Bolt
+Return of the Wildspeaker
+Flawless Maneuver
+Sink into Stupor
+Mortify
+Akroma's Will
+Stroke of Midnight
+Crop Rotation
+Force of Will
+Rapid Hybridization
+Fell the Profane
+Village Rites
+Thrill of Possibility
+Opt
+Harrow
+Abrupt Decay
+Revitalizing Repast
+Eladamri's Call
+Malakir Rebirth
+Inspiring Call
+Force of Negation
+Inkshield
+Snap
+Untimely Malfunction
+Tear Asunder
+Infernal Grasp
+Unexpected Windfall
+Withering Torment
+Reality Shift
+Aetherize
+Flusterstorm
+Seething Song
+Dawn's Truce
+Redirect Lightning
+Entomb
+Crackling Doom
+Nature's Claim
+Pact of Negation
+Silence
+Wear // Tear
+Consider
+Go for the Throat
+Snakeskin Veil
+Entish Restoration
+Ephemerate
+Prismari Command
+Dispatch
+Demand Answers
+Deflecting Palm
+Tamiyo's Safekeeping
+Red Elemental Blast
+Legion Leadership
+Mental Misstep
+Cabal Ritual
+Fracture
+Chord of Calling
+Grisly Salvage
+Pyroblast
+Veil of Summer
+Unbreakable Formation
+Second Harvest

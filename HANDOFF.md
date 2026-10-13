@@ -66,9 +66,10 @@ re-sorting or shifting cards, and must spread cards evenly without manual rebala
 - `decklist.txt` — user's deck list (Moxfield-style export).
 
 ## Known limitations / open items
-- **ManaBox CSV format is unverified.** The CSV reader accepts any header with Name / Card Name
-  and optional Quantity / Count / Qty. ManaBox only documents its *import* columns. When the user
-  has a real export, check its header and test `diff`/`layout` on it.
+- ManaBox CSV export verified (Oct 2026, `Primo.csv`, 126 cards). Header: `Name, Set code, Set name,
+  Collector number, Foil, Rarity, Quantity, ManaBox ID, Scryfall ID, Purchase price, Misprint, Altered,
+  Signed, Condition, Language, Proxy, Purchase price currency, Added`. One row per printing/finish, so a
+  name can span several rows; double-faced cards are `Front // Back`. Only Name + Quantity are used.
 - No card-name validation for plain-text lists (ManaBox exports should already be canonical).
   Idea: Scryfall `/cards/named?fuzzy=` or a local bulk `oracle_cards` file.
 - Offered but not built: a phone-friendly web UI (`where` lookup) for use at the table.

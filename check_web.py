@@ -2,7 +2,7 @@
 """Check that docs/binder.js gives the same sides as binder.py.
 
 Usage:
-  python3 check_web.py [names.txt ...]   # default: exports/*.csv, edhrec_top.txt, decklist.txt
+  python3 check_web.py [names.txt ...]   # default: exports/*.csv and research/ lists
 
 Needs node. Exit 1 on any mismatch.
 """
@@ -21,8 +21,8 @@ console.log(JSON.stringify(names.map((n) => [B.normalize(n), B.candidates(n)])))
 
 def main(paths):
     paths = paths or sorted(glob.glob(os.path.join(HERE, "exports", "*.csv"))) + [
-        os.path.join(HERE, "edhrec_top.txt"),
-        os.path.join(HERE, "decklist.txt"),
+        os.path.join(HERE, "research", "edhrec_top.txt"),
+        os.path.join(HERE, "research", "decklist.txt"),
     ]
     paths = [p for p in paths if os.path.exists(p)]
     names = sorted({n for p in paths for n in read_list(p)})

@@ -1,11 +1,12 @@
 """Compare placement strategies for a 40-side x 9-slot binder using real card names."""
 
-import random, re, statistics, collections, json, os
-
-# share the exact hash and normalization the real binder uses
-from binder import BASICS, SIDES, POCKETS as CAP, normalize, candidates as hashes
+import random, re, statistics, collections, json, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+
+# share the exact hash and normalization the real binder uses
+sys.path.insert(0, os.path.dirname(HERE))
+from binder import BASICS, SIDES, POCKETS as CAP, normalize, candidates as hashes
 
 
 def load_pool():

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Binder Lookup</title>
+<meta name="apple-mobile-web-app-title" content="Binder">
+<style>
+  :root {
+    --bg: #f6f5f2; --card: #ffffff; --text: #1d1c1a; --muted: #6b6862; --line: #e2dfd8;
+    --accent: #7a3e9d; --in: #1f7a4d; --out: #b23b2e; --chip: #efeae2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151413; --card: #1f1e1c; --text: #ece9e3; --muted: #9b968d; --line: #33312d;
+      --accent: #c08ae0; --in: #5fc58f; --out: #f07b6c; --chip: #2a2825;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 16px 16px 48px; }
+  h1 { font-size: 1.3rem; margin: 4px 0 16px; }
+  h2 { font-size: 1rem; margin: 0 0 12px; }
+  h3 { font-size: .9rem; margin: 16px 0 6px; text-transform: uppercase; letter-spacing: .04em; }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+  form { display: flex; gap: 8px; }
+  input[type=search] {
+    flex: 1; min-width: 0; font-size: 17px; padding: 10px 12px; border-radius: 8px;
+    border: 1px solid var(--line); background: var(--bg); color: var(--text);
+  }
+  button, .file {
+    font: inherit; font-size: 15px; padding: 10px 14px; border-radius: 8px; cursor: pointer;
+    border: 1px solid var(--line); background: var(--chip); color: var(--text); display: inline-block;
+  }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .file input { display: none; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .muted { color: var(--muted); font-size: .9rem; }
+  .error { color: var(--out); }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { padding: 8px 0; border-top: 1px solid var(--line); }
+  li:first-child { border-top: 0; }
+  .name { font-weight: 600; }
+  .sides { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+  .side { background: var(--chip); border-radius: 6px; padding: 2px 8px; font-size: .9rem; font-variant-numeric: tabular-nums; }
+  .or { color: var(--muted); font-size: .85rem; align-self: center; }
+  .in h3 { color: var(--in); }
+  .out h3 { color: var(--out); }
+  .result { margin-top: 12px; }
+  details summary { cursor: pointer; margin-top: 16px; font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Binder lookup</h1>
+
+  <section>
+    <h2>Find a card</h2>
+    <form id="lookup">
+      <input type="search" id="q" list="suggest" placeholder="Card name" autocomplete="off" autocapitalize="words" enterkeyhint="search">
+      <datalist id="suggest"></datalist>
+      <button class="primary">Find</button>
+    </form>
+    <ul id="lookups" class="result"></ul>
+  </section>
+
+  <section>
+    <h2>Changes from an export</h2>
+    <p class="muted" id="baseline">Loading baseline…</p>
+    <div class="row">
+      <label class="file primary-file"><input type="file" id="newFile" accept=".csv,text/csv">Load new export</label>
+      <button id="fromRepo">Baseline from repo</button>
+      <label class="file"><input type="file" id="baseFile" accept=".csv,text/csv">Baseline from file</label>
+    </div>
+    <div id="changes" class="result"></div>
+  </section>
+
+  <p class="muted">Every card lives on one of its two sides. Put new cards on whichever has more room.</p>
+</main>
+
+<script src="binder.js"></script>
+<script>
+"use strict";
+const $ = (id) => document.getElementById(id);
+const REPO = location.hostname.endsWith(".github.io")
+  ? `${location.hostname.split(".")[0]}/${location.pathname.split("/")[1]}`
+  : "friend0/binder";
+const KEY = "binder-baseline";
+
+const store = {
+  get() { try { return JSON.parse(localStorage.getItem(KEY)); } catch { return null; } },
+  set(v) { try { localStorage.setItem(KEY, JSON.stringify(v)); return true; } catch { return false; } },
+};
+
+function esc(s) {
+  return s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+}
+
+function cardItem({ name, qty, sides }, note = "") {
+  const q = qty > 1 ? `${qty}× ` : "";
+  return `<li><div class="name">${q}${esc(name)}${note}</div>
+    <div class="sides"><span class="side">${sides[0]}</span><span class="or">or</span><span class="side">${sides[1]}</span></div></li>`;
+}
+
+// ---------- single lookup ----------
+
+let suggestTimer;
+$("q").addEventListener("input", () => {
+  clearTimeout(suggestTimer);
+  const q = $("q").value.trim();
+  if (q.length < 2) return;
+  suggestTimer = setTimeout(async () => {
+    try {
+      const r = await fetch(`https://api.scryfall.com/cards/autocomplete?q=${encodeURIComponent(q)}`);
+      const { data } = await r.json();
+      $("suggest").innerHTML = data.map((n) => `<option value="${esc(n)}">`).join("");
+    } catch {}
+  }, 200);
+});
+
+// Hash the canonical Scryfall name, so a typo doesn't give the wrong sides.
+async function canonical(typed) {
+  try {
+    const r = await fetch(`https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(typed)}`);
+    if (r.status === 404) return { error: "No card by that name on Scryfall." };
+    if (!r.ok) throw new Error();
+    return { name: (await r.json()).name };
+  } catch {
+    return { name: typed, note: " (offline: not checked on Scryfall)" };
+  }
+}
+
+$("lookup").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const typed = $("q").value.trim();
+  if (!typed) return;
+  const { name, note = "", error } = await canonical(typed);
+  let html;
+  if (error) html = `<li><div class="name">${esc(typed)}</div><div class="error">${error}</div></li>`;
+  else if (Binder.isBasic(name)) html = `<li><div class="name">${esc(name)}</div><div class="muted">Basic land, not binder</div></li>`;
+  else html = cardItem({ name, qty: 1, sides: Binder.both(name) }, `<span class="muted">${note}</span>`);
+  $("lookups").insertAdjacentHTML("afterbegin", html);
+  $("q").value = "";
+  $("q").blur();
+});
+
+// ---------- export changes ----------
+
+let baseline = store.get();
+let latest = null;
+
+function showBaseline() {
+  $("baseline").textContent = baseline
+    ? `Comparing against ${baseline.label} (${Binder.readCsv(baseline.text).length} cards).`
+    : "No baseline yet. Load one from the repo or a file, then load your new export.";
+}
+
+function setBaseline(label, text) {
+  Binder.readCsv(text); // throws on a bad file
+  baseline = { label, text };
+  if (!store.set(baseline)) $("baseline").classList.add("error");
+  showBaseline();
+  render();
+}
+
+function render() {
+  if (!latest) { $("changes").innerHTML = ""; return; }
+  const cards = Binder.readCsv(latest.text);
+  const all = Binder.inventory(cards);
+  let html = "";
+  if (baseline) {
+    const d = Binder.diff(Binder.readCsv(baseline.text), cards);
+    const total = (xs) => xs.reduce((n, x) => n + x.qty, 0);
+    html += `<div class="in"><h3>Put in (${total(d.in)})</h3><ul>${d.in.map((c) => cardItem(c)).join("") || '<li class="muted">Nothing new</li>'}</ul></div>`;
+    html += `<div class="out"><h3>Take out (${total(d.out)})</h3><ul>${d.out.map((c) => cardItem(c)).join("") || '<li class="muted">Nothing removed</li>'}</ul></div>`;
+    html += `<p class="row"><button class="primary" id="accept">Make ${esc(latest.label)} the baseline</button></p>`;
+  }
+  html += `<details ${baseline ? "" : "open"}><summary>All cards (${cards.length})</summary><ul>${all.map((c) => cardItem(c)).join("")}</ul></details>`;
+  $("changes").innerHTML = html;
+  const accept = $("accept");
+  if (accept) accept.onclick = () => { setBaseline(latest.label, latest.text); latest = null; render(); };
+}
+
+async function readFile(input) {
+  const f = input.files[0];
+  input.value = "";
+  return f ? { label: f.name, text: await f.text() } : null;
+}
+
+function fail(err) {
+  $("changes").innerHTML = `<p class="error">${esc(String(err.message || err))}</p>`;
+}
+
+$("newFile").addEventListener("change", async (e) => {
+  try {
+    const f = await readFile(e.target);
+    if (!f) return;
+    Binder.readCsv(f.text);
+    latest = f;
+    render();
+  } catch (err) { fail(err); }
+});
+
+$("baseFile").addEventListener("change", async (e) => {
+  try {
+    const f = await readFile(e.target);
+    if (f) setBaseline(f.label, f.text);
+  } catch (err) { fail(err); }
+});
+
+// The newest exports/YYYY-MM-DD.csv committed to the repo.
+$("fromRepo").addEventListener("click", async () => {
+  try {
+    const r = await fetch(`https://api.github.com/repos/${REPO}/contents/exports`);
+    if (!r.ok) throw new Error(`GitHub: ${r.status}`);
+    const files = (await r.json()).filter((f) => /^\d{4}-\d{2}-\d{2}\.csv$/.test(f.name));
+    if (!files.length) throw new Error("No exports/*.csv in the repo");
+    const newest = files.sort((a, b) => (a.name < b.name ? 1 : -1))[0];
+    const text = await (await fetch(newest.download_url)).text();
+    setBaseline(`repo ${newest.name}`, text);
+  } catch (err) { fail(err); }
+});
+
+showBaseline();
+</script>
+</body>
+</html>
